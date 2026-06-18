@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AuraBloom | Reviews</title>
+  <style>
+    body { font-family: sans-serif; padding: 2rem; background: #121214; color: white; }
+    input, textarea { display: block; width: 100%; margin: 10px 0; padding: 10px; }
+  </style>
+</head>
+<body>
+  <h2>Client Feedback</h2>
+  <input id="name" placeholder="Your Name">
+  <textarea id="reviewText" placeholder="Your experience..."></textarea>
+  <button id="submitBtn">Post Review</button>
+  <div id="reviewsList"></div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDx5VnYaj7jCeULsSKnjo0H0s201eoezIM",
+      authDomain: "aurabloom-66ddb.firebaseapp.com",
+      projectId: "aurabloom-66ddb",
+      storageBucket: "aurabloom-66ddb.appspot.com",
+      messagingSenderId: "586311715116",
+      appId: "1:586311715116:web:961210878b8691e4864489",
+      measurementId: "G-5ZFP2T7PG3"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    document.getElementById('submitBtn').onclick = async () => {
+      const name = document.getElementById('name').value;
+      const text = document.getElementById('reviewText').value;
+      await addDoc(collection(db, "reviews"), { name, text, date: new Date().toLocaleDateString() });
+      alert("Message sent! Thank you for choosing AuraBloom.");
+    };
+  </script>
+</body>
+</html>
