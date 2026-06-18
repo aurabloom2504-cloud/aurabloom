@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AuraBloom | Premium Doorstep Salon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-main: #121214;
+      --bg-card: #1a1a1e;
+      --accent-gold: #d4af37;
+      --text-pure: #ffffff;
+      --text-muted: #a0a0aa;
+      --border-color: #2a2a30;
+      --whatsapp-green: #25D366;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-pure);
+      line-height: 1.6;
+    }
+    header {
+      padding: 1.5rem 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(18, 18, 20, 0.95);
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .brand-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+      color: var(--text-pure);
+      text-decoration: none;
+    }
+    .brand-logo span { color: var(--accent-gold); }
+    .hero {
+      padding: 6rem 8% 4rem 8%;
+      text-align: center;
+      background: radial-gradient(circle at center, #1f1a24 0%, var(--bg-main) 70%);
+      border-bottom: 1px solid var(--border-color);
+    }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+    .hero h1 span { color: var(--accent-gold); font-style: italic; }
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto 2.5rem auto;
+    }
+    .services-section {
+      padding: 5rem 8%;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .section-title {
+      text-align: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .service-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .service-card:hover { transform: translateY(-5px); border-color: var(--accent-gold); }
+    .service-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; margin-bottom: 1rem; color: var(--accent-gold); }
+    .service-card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; }
+    .booking-section {
+      text-align: center;
+      padding: 4rem 8%;
+      background: var(--bg-card);
+      border-top: 1px solid var(--border-color);
+    }
+    .booking-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+    .whatsapp-btn {
+      display: inline-block;
+      background-color: var(--whatsapp-green);
+      color: #fff;
+      text-decoration: none;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-top: 1.5rem;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    }
+    nav a {
+      color: var(--text-pure);
+      text-decoration: none;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    nav a:hover { color: var(--accent-gold); }
+  </header>
+  </style>
+</head>
+<body>
+  <header>
+    <a href="#" class="brand-logo">AURA<span>BLOOM</span></a>
+    <nav>
+      <a href="#">Client Reviews</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>The Luxury Salon Experience,<br><span>Delivered to Your Door.</span></h1>
+    <p>AuraBloom brings premium beauty, hair care, and bridal makeovers directly to the comfort and safety of your home. No travel, no waiting—just absolute pampering.</p>
+  </section>
+
+  <section class="services-section">
+    <h2 class="section-title">Our Signature Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Hair Artistry</h3>
+        <p>Premium haircuts, deep conditioning spa treatments, and professional styling utilizing top-tier global products.</p>
+      </div>
+      <div class="service-card">
+        <h3>Bridal Makeovers</h3>
+        <p>Complete bridal and pre-bridal packages, ensuring you look flawless on your most important day without leaving home.</p>
+      </div>
+      <div class="service-card">
+        <h3>Skin & Esthetics</h3>
+        <p>Rejuvenating facials, luxury manicures, pedicures, and advanced skin therapies customized for your skin type.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="booking-section">
+    <h2>Ready for your transformation?</h2>
+    <p style="color: var(--text-muted); margin-bottom: 1rem;">Tap below to instantly message our team and secure your slot.</p>
+    
+    <a href="https://wa.me/910000000000?text=Hi%20AuraBloom!%20I%20would%20like%20to%20book%20a%20doorstep%20service." target="_blank" class="whatsapp-btn">
+      Book via WhatsApp
+    </a>
+  </section>
+
+</body>
+</html>
