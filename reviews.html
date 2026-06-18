@@ -13,8 +13,9 @@
   <input id="name" placeholder="Your Name">
   <textarea id="reviewText" placeholder="Your experience..."></textarea>
   <button id="submitBtn">Post Review</button>
-  <div id="reviewsList"></div>
-
+  <div id="reviews-container">
+  <h2>Client Testimonials</h2>
+  </div>
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
     import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
